@@ -7,7 +7,7 @@
     <title>BarberFlow - O Sistema dos Líderes</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- TAILWIND CDN PARA PREVIEW RÁPIDO -->
+    <!-- TAILWIND CDN (Mantido para garantir estilos mesmo se o build de CSS falhar) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -31,33 +31,32 @@
       }
     </script>
 
-    <!-- POLYFILL PARA PROCESS.ENV (Evita erro de crash no preview) -->
+    <!-- POLYFILL PARA PROCESS.ENV (Evita crash se variável não existir) -->
     <script>
       window.process = {
         env: {
-          NODE_ENV: 'development',
-          API_KEY: '' // Será preenchido pelo Vite em produção ou ignorado aqui
+          NODE_ENV: 'production',
+          API_KEY: '' 
         }
       };
     </script>
-
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://aistudiocdn.com/react@^19.2.0",
-        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-        "react/": "https://aistudiocdn.com/react@^19.2.0/",
-        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-        "date-fns": "https://aistudiocdn.com/date-fns@^4.1.0",
-        "date-fns/": "https://aistudiocdn.com/date-fns@^4.1.0/",
-        "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
-        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-        "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
-        "vite": "https://aistudiocdn.com/vite@^7.2.4"
-      }
-    }
-    </script>
-  </head>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "date-fns": "https://aistudiocdn.com/date-fns@^4.1.0",
+    "date-fns/": "https://aistudiocdn.com/date-fns@^4.1.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
   <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
