@@ -1,12 +1,7 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 import { MOCK_SERVICES, MOCK_PROFESSIONALS } from '../constants';
 
-// Initializing Gemini
-// NOTE: In a real production app, these calls should often go through a backend proxy 
-// to keep the API key secure. For this demo, we use the env var directly as instructed.
-const apiKey = process.env.API_KEY || '';
-const ai = new GoogleGenAI({ apiKey });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const generateAIResponse = async (userMessage: string): Promise<string> => {
   try {
