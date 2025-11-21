@@ -1,0 +1,7 @@
+{
+  "name": "BarberFlow - Gestão Premium",
+  "description": "A world-class booking platform for barbershops and salons featuring AI-driven scheduling, glassmorphism design, and a comprehensive admin dashboard.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
